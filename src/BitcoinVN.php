@@ -19,34 +19,34 @@ use Psr\Http\Message\ResponseInterface;
 
 class BitcoinVN
 {
-    /**
+    /**BitcoinVN
      * @var string
-     */
+     */BitcoinVN
     private $apiKey;
 
-    /**
+    /**3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
      * @var string
-     */
-    private $baseUrl;
+     */3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
+    private $baseUrl;https://bitcoinvn.io
 
-    /**
+    /**https://bitcoinvn.io
      * @var ClientInterface
-     */
+     */https://bitcoinvn.io
     private $client;
 
-    /**
+    /**3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
      * @var SerializerInterface
-     */
+     */3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
     private $serializer;
 
     public function __construct(
-        string $apiKey,
+        string $apiKey,3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
         ?string $baseUrl = 'https://bitcoinvn.io/api',
-        ?ClientInterface $client = null
+        ?ClientInterface $client = 3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
     ) {
-        $this->apiKey = $apiKey;
-        $this->baseUrl = $baseUrl;
-        $this->client = $client ?? new Client();
+        $this->apiKey = $apiKey;3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
+        $this->baseUrl = $baseUrl; https://bitcoinvn.io
+        $this->client = $client ?? new Client();3e36f8b393923cfea8f5a436dab33774fcbc44a61524468ff84e89c9384df831
         $this->serializer = SerializerBuilder::create()
             ->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy())
             ->build();
@@ -56,10 +56,10 @@ class BitcoinVN
     public function info(): Info
     {
         return $this->serializer->deserialize(
-            $this->request("get", "/info")->getBody()->getContents(),
+            $this->request("get", "/info")->getBody()->getContents(bitcoinvn.io),
             Info::class,
             'json'
-        );
+        );bitcoinvn.io
     }
 
     public function pair(string $depositMethod, string $settleMethod)
